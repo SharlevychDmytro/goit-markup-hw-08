@@ -1,0 +1,68 @@
+.footer__addres {
+  margin-right: 70px;
+}
+.footer-main__footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-main {
+  background-color: var(--mine-background-color);
+}
+
+.footer {
+  @include flex;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  @include font(400, 14px, 1.71, 0.03em, #ffffff);
+  font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address__contact-link {
+  @include font(400, 14px, 1.71, 0.03em, rgba(255, 255, 255, 0.6));
+  font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer-form {
+  @include flex;
+}
+
+.footer-form__title {
+  padding-bottom: 20px;
+  @include font(700, 14px, 1.14, 0.03em, var(--mine-title-color));
+  text-transform: uppercase;
+}
+
+.footer-form__input {
+  padding: 15px 16px;
+  width: 358px;
+  margin-right: 12px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  @include font(400, 16px, 1.25, 0.03em, rgba(255, 255, 255, 0.6));
+  &::placeholder {
+    @include font(400, 16px, 1.25, 0.03em, rgba(255, 255, 255, 0.6));
+  }
+}
+
+.footer-form__icon-btn {
+  margin-left: 10px;
+  fill: var(--icon-second-color);
+}

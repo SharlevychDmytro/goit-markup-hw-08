@@ -1,0 +1,30 @@
+.quality {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
+  &__item {
+    flex-basis: calc(100% / 4 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+  }
+  &__title {
+    @include font(700, 14px, 1.14, 0.03em, var(--third-title-color));
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include font(400, 14px, 1.71, 0.03em, var(--main-text-color));
+  }
+}
+
+.quality-icon__wrap {
+  margin-bottom: 30px;
+  @include flex(flex, center, center);
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
