@@ -1,5 +1,10 @@
 .footer__addres {
-  margin-right: 70px;
+  @media screen and(max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 .footer-main__footer {
   padding-top: 60px;
@@ -11,11 +16,24 @@
 }
 
 .footer {
-  @include flex;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @media screen and(max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and(min-width: 1200px) {
+    @include flex;
+  }
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .address__link {
@@ -38,8 +56,14 @@
   }
 }
 
+.footer-form-wrap {
+  margin: 0 auto;
+}
+
 .footer-form {
-  @include flex;
+  @media screen and(min-width: 1200px) {
+    @include flex;
+  }
 }
 
 .footer-form__title {
@@ -49,9 +73,14 @@
 }
 
 .footer-form__input {
+  @media screen and(max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and(max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  width: 450px;
   padding: 15px 16px;
-  width: 358px;
-  margin-right: 12px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -59,6 +88,10 @@
   @include font(400, 16px, 1.25, 0.03em, rgba(255, 255, 255, 0.6));
   &::placeholder {
     @include font(400, 16px, 1.25, 0.03em, rgba(255, 255, 255, 0.6));
+  }
+  @media screen and(min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 
