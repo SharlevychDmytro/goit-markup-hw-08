@@ -7,8 +7,13 @@
 }
 
 .checkbox__text {
+  @media screen and(max-width:1199px) {
+    @include font(400, 12px, 1.17, 0.03em, var(--main-text-color));
+  }
+
+  @include font(400, 14px, 1.71, 0.03em, var(--main-text-color));
+  @include flex;
   margin-right: 5px;
-  @include font(400, 14px, 1.71, 0.03em, var(--main-text-color)) @include flex;
   span {
     width: 16px;
     height: 15px;
