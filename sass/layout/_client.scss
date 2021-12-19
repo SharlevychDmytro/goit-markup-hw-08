@@ -1,8 +1,12 @@
 .client {
   &__title {
-    @include font(700, 36px, 1.17, 0.03em, var(--second-title-color));
+    @include font(700, 28px, 1.18, 0.03em, var(--second-title-color));
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media screen and(min-width: 1200px) {
+      @include font(700, 36px, 1.17, 0.03em, var(--second-title-color));
+      margin-bottom: 50px;
+    }
   }
   &__list {
     @include flex(flex, center, center);
@@ -11,11 +15,19 @@
     margin-left: calc(-1 * var(--card-set-gap));
   }
   &__item {
-    width: 170px;
-    height: 92px;
-    flex-basis: calc(100% / 6 - var(--card-set-gap));
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-top: var(--card-set-gap);
     margin-left: var(--card-set-gap);
+    max-width: 210px;
+    height: 92px;
+    @media screen and(min-width: 768px) {
+      flex-basis: calc(100% / 3 - var(--card-set-gap));
+      max-width: 226px;
+    }
+    @media screen and(min-width: 1200px) {
+      flex-basis: calc(100% / 6 - var(--card-set-gap));
+      max-width: 170px;
+    }
   }
   &__icon {
     fill: currentColor;
