@@ -39,5 +39,10 @@
 }
 
 .checkbox__link {
-  color: #2196f3;
+  @media screen and(max-width: 1199px) {
+    @include font(400, 12px, 1.17, 0.03em, #2196f3);
+  }
+  @media screen and(min-width: 1200px) {
+    @include font(400, 14px, 1.71, 0.03em, #2196f3);
+  }
 }

@@ -393,8 +393,24 @@ img {
   fill: var(--icon-second-color);
 }
 
-.checkbox__link {
-  color: #2196f3;
+@media screen and (max-width: 1199px) {
+  .checkbox__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+  }
 }
 
 .modal {
@@ -1169,7 +1185,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-start;
   }
 }
